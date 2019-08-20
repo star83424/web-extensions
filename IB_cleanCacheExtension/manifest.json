@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "IB_AEMCacheCleaner",
+  "version": "1.0",
+  "description": "Auto-clicking for cleaning all AEM content cahces",
+  "icons": {
+    "16": "broom.png",
+    "48": "broom.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://172.24.36.77:*/cache.html"],
+      "js": ["jquery-3.4.1.min.js","content-script.js"]
+    }
+  ],
+  "background": {
+    "scripts": [ "background.js"]
+  },
+  "permissions":[
+    "contextMenus"
+  ]
+  
+}

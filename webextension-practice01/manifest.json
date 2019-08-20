@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "extension_practice_pc01",
+  "version": "2.0",
+  "description": "Adding mikasa image and dada",
+  "icons": {
+    "48": "mikasa_mva300.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "mikasa_mva300.png"
+    },
+    "default_title": "click me"
+  },
+  "web_accessible_resources": [
+    "mikasa_mva300.png"
+  ]
+}
